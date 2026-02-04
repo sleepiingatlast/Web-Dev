@@ -1,0 +1,59 @@
+<DOCTYPE! html>
+<html>
+    <head>
+        <title>Instagram page</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="static/css/styles2.css">
+    </head>
+
+    <body>
+        <main class="page">
+            <section class="layout">
+                <div class="left">
+                    <img src="static/images/insta.jpeg"
+                    class="logo"
+                    alt="instagram logo"
+                    width="60px">
+
+                    <p class="intro">Посмотрите, какими моментами из жизни поделились ваши близкие друзья.</p>
+
+                    <img src="static/images/insta-mockup.webp"
+                    class="mockup"
+                    alt="insta-mockup"
+                    width="550px">
+                </div>
+
+                <div class="right">
+                    <p>Войти в Instagram</p>
+
+                    <form action="">
+                        <fieldset>
+                            <label for="login">
+                                <input type="text"
+                                placeholder="Имя пользователя, номер мобильного телефона или электронный адрес"
+                                required
+                                pattern="([a-zA-Z0-9._]{3,30})|([^@\s]+@[^@\s]+\.[^@\s]+)|(\+?\d[\d\s\-()]{7,20})">
+                                </label>
+                        </fieldset>
+
+                        <fieldset>
+                            <label for="password">
+                                <input type="password"
+                                placeholder="Пароль"
+                                required>
+                            </label>
+                        </fieldset>
+
+                        <input type="submit" value="Войти">
+                        <br>
+                        <a href="#">Забыли пароль?</a>
+                        <div class="divider"></div>
+                        <button type="submit" class="facebook">Войти через Facebook</button>
+                        <br>
+                        <button type="submit" class="new-acc">Создать новый аккаунт</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>

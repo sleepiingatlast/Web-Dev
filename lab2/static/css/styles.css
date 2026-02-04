@@ -1,0 +1,110 @@
+
+
+body{
+    font-family: Haettenschweiler, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center; /*верт*/
+    align-items: center; /*гориз*/
+    background: #f0f2f5;
+}
+
+.layout{
+    display: flex;
+    align-items: center;
+}
+
+.left{
+    max-width: 400px;
+    align-items: center;
+}
+
+.left p{
+    font-size: 20px;
+    margin: 10px 0 0;
+}
+
+.right{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.right form {
+  background: #fff;
+  padding: 16px;
+  border-radius: 8px;
+  width: 300px;
+}
+
+a{
+    text-decoration: none;
+}
+
+fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0 0 12px;
+}
+
+input[type="text"], input[type="password"] {
+  width: 100%;
+  padding: 14px 12px;
+  font-size: 12px;
+
+  border: 1px solid #dddfe2;
+  border-radius: 6px;
+  outline: none;
+}
+
+input[type="submit"] {
+  width: 100%;
+  padding: 12px;
+
+  border: 0;
+  border-radius: 6px;
+
+  background: #1877f2;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+
+.forgot {
+  display: block;
+  margin-top: 12px;
+  text-align: center;
+  color: #1877f2;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.new-acc{
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+
+  padding: 12px 18px;
+  border-radius: 6px;
+
+  background: #42b72a;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.create-new {
+  width: 360px;
+  margin-top: 14px;
+  font-size: 13px;
+  text-align: center;
+  color: #1c1e21;
+}
+
+.divider {
+  height: 1px;
+  background: #dadde1;
+  margin: 16px 0;
+}

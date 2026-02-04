@@ -1,0 +1,63 @@
+<DOCTYPE! html>
+<html>
+    <head>
+        <title>Facebook page</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="static/css/styles.css">
+    </head>
+
+    <body>
+        <main class="page">
+            <section class="layout">
+                <div class="left">
+                    <img class="image" src="static/images/facebook.logo.png"
+                    alt="Facebook logo"
+                    width="200px">
+
+                    <p>Facebook помогает вам всегда оставаться на связи и общаться со своими знакомыми.</p>
+                </div>
+
+                <div class="right">
+                    <form action="">
+                        <fieldset>
+                            <label for="login">
+                                <input type="text"
+                                autofocus
+                                placeholder="Электронный адрес или номер телефона"
+                                required
+                                pattern="([^@\s]+@[^@\s]+\.[^@\s]+)|(\+7\d{10})|([78]\d{10})"
+                                name="Введите электронный адрес или номер телефона">
+                            </label>
+                        </fieldset>
+
+                        <fieldset>
+                            <label for="password">
+                                <input type="password"
+                                autofocus
+                                placeholder="Пароль"
+                                required
+                                name="Введите надеждный пароль">
+                        </fieldset>
+
+                        <fieldset>
+                            <input type="submit" value="Вход">
+                        </fieldset>
+                       
+                        <a type="submit" class="forgot" href="#">Забыли пароль?</a>
+                        <br>
+                        <div class="divider"></div>
+                        <button type="submit" class="new-acc" href="#">Создать новый аккаунт</button>
+                    </form>
+
+                    <p class="create-new">
+                        <a href="#">Создать Страницу</a> знаменитости, музыкальной группы или компании.
+                    </p>
+                </div>
+            </section>
+
+            <footer>
+
+            </footer>
+        </main>
+    </body>
+</html>
