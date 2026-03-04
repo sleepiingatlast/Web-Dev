@@ -1,0 +1,19 @@
+.album-list{ list-style:none; padding:0; }
+.album-item{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:10px 12px;
+  border:1px solid #ddd;
+  border-radius:10px;
+  margin:10px 0;
+}
+.album-link{ text-decoration:none; color:#111; flex:1; }
+.del{
+  background:#e53935;
+  color:white;
+  border:none;
+  padding:8px 10px;
+  border-radius:8px;
+  cursor:pointer;
+}

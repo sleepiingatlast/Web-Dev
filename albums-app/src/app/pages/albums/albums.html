@@ -1,0 +1,16 @@
+<h1>Albums</h1>
+
+<div *ngIf="loading">Loading...</div>
+<div *ngIf="error">{{ error }}</div>
+
+<ul class="album-list" *ngIf="!loading && !error">
+  <li class="album-item" *ngFor="let a of albums">
+    <a class="album-link" [routerLink]="['/albums', a.id]">
+      <b>#{{ a.id }}</b> — {{ a.title }}
+    </a>
+
+    <button class="del" (click)="deleteAlbum(a.id); $event.stopPropagation()">
+      Delete
+    </button>
+  </li>
+</ul>
