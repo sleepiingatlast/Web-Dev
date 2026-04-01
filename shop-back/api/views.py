@@ -1,44 +1,20 @@
-from rest_framework.decorators import api_view
+from rest_framework import viewsets
+from  rest_framework.decorators import action
 from rest_framework.response import Response
-from rest_framework import status
-
 from .models import Category, Product
-from .serializer import CategorySerializer, ProductSerializer
+from .serializers import CategorySerializer, ProductSerializer
 
-@api_view(['GET'])
-def category_list(request):
-    categories = Category.objects.all()
-    serializer = CategorySerializer(categories, many=True)
-    return Response(serializer.data)
+class CategoryViewSet(viewsets.ModelViewSet):
+    queryset = Category.objects.all()
+    serializer_class = CategorySerializer
 
-@api_view(['GET'])
-def category_detail(request, id):
-    try:
-        category = Category.objects.get(id=id)
-    except Category.DoesNotExist:
-        return Response({'error': 'Category not found'}, status=status.HTTP_404_NOT_FOUND)
+    @action(detail = True, methods=['get'])
+    def products(self, request, pk=None):
+        category = self.get_object()
+        products = Product.objects.filter(category = category)
+        serializer = ProductSerializer(products, many=True)
+        return Response(serializer.data)
 
-    serializer = CategorySerializer(category)
-    return Response(serializer.data)
-
-@api_view(['GET'])
-def product_list(request):
-    products = Product.objects.all()
-    serializer = ProductSerializer(products, many=True)
-    return Response(serializer.data)
-
-@api_view(['GET'])
-def product_detail(request, id):
-    try:
-        product = Product.objects.get(id=id)
-    except Product.DoesNotExist:
-        return Response({'error': 'Product not found'}, status=status.HTTP_404_NOT_FOUND)
-
-    serializer = ProductSerializer(product)
-    return Response(serializer.data)
-
-@api_view(['GET'])
-def products_by_category(request, id):
-    products = Product.objects.filter(category_id=id)
-    serializer = ProductSerializer(products, many=True)
-    return Response(serializer.data)
+class ProductViewSet(viewsets.ModelViewSet):
+    queryset = Product.objects.all()
+    serializer_class = ProductSerializer
